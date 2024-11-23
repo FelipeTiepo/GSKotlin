@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_green"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- Ícone de energia sustentável -->
+        <ImageView
+            android:id="@+id/energyIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="start"
+            android:src="@drawable/baseline_autorenew_24"
+            />
+
+        <!-- Título centralizado -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Buscar sugestões"
+        android:iconifiedByDefault="false"
+        android:layout_margin="8dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Título da sugestão"
+        android:inputType="text"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:textColor="@color/dark_green" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Descrição da sugestão"
+        android:inputType="text"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:textColor="@color/dark_green" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Adicionar sugestão"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:background="@color/light_green"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Felipe Tiepo RM: 95026 Eloisa Araujo RM: 94604"
+        android:textColor="@color/dark_green"
+        android:textSize="14sp"
+        android:background="@color/light_green" />
+
+</LinearLayout>
